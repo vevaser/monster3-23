@@ -27,6 +27,9 @@ namespace monster3_23
             Vasya.Passport();
             Console.WriteLine("************************************");
 
+            Masha.SaveGame(); // Сохраняем данные для объекта
+            Vasya.SaveGame();
+
 
             Console.ReadKey();
         }

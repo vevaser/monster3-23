@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace monster3_23
 {
@@ -77,6 +78,16 @@ namespace monster3_23
         {
             aim.Health -= Power;
             this.Ammo -= Power;
+        }
+
+        public void SaveGame()
+        {
+            // Данный метод является методом экземпляра (т.е. НЕстатический метод
+            // - сохраняет данные только для 1 игрока
+            StreamWriter f = new StreamWriter("GameMonster.sav");
+            f.WriteLine("Monster {0} \t health={1} ammo={2}",
+                this.Name, this.Health, this.Ammo);
+            f.Close();
         }
 
         private string name;

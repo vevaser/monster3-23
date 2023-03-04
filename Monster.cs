@@ -90,6 +90,16 @@ namespace monster3_23
             f.Close();
         }
 
+        static public void SaveAllGame(List<Monster> Players)
+        {
+            // Статический метод сохраняет данные для всех игроков из списка Players
+            StreamWriter f = new StreamWriter("GameAllBots.sav");
+            foreach (Monster mon in Players)
+                f.WriteLine("Monster {0} \t health={1} ammo={2}",
+                    mon.Name, mon.Health, mon.Ammo);
+            f.Close();
+        }
+
         private string name;
         private int health;
         private int ammo;

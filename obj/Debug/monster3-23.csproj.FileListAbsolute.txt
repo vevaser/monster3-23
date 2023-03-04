@@ -1,0 +1,7 @@
+D:\2023\Git\monster3-23\bin\Debug\monster3-23.exe.config
+D:\2023\Git\monster3-23\bin\Debug\monster3-23.exe
+D:\2023\Git\monster3-23\bin\Debug\monster3-23.pdb
+D:\2023\Git\monster3-23\obj\Debug\monster3-23.csprojAssemblyReference.cache
+D:\2023\Git\monster3-23\obj\Debug\monster3-23.csproj.CoreCompileInputs.cache
+D:\2023\Git\monster3-23\obj\Debug\monster3-23.exe
+D:\2023\Git\monster3-23\obj\Debug\monster3-23.pdb

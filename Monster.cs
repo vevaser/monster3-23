@@ -73,6 +73,12 @@ namespace monster3_23
             Console.WriteLine("Monster {0} \t healh={1} ammo={2}", name, health, ammo);
         }
 
+        public void Attack(Monster aim, int Power)
+        {
+            aim.Health -= Power;
+            this.Ammo -= Power;
+        }
+
         private string name;
         private int health;
         private int ammo;

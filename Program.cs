@@ -22,6 +22,11 @@ namespace monster3_23
             Vasya.Name = "Vasya";
             Vasya.Passport();
 
+            Vasya.Attack(Masha, 50); // Vasya атакует Masha с силой 50
+            Masha.Passport();
+            Vasya.Passport();
+            Console.WriteLine("************************************");
+
 
             Console.ReadKey();
         }

@@ -62,6 +62,35 @@ namespace monster3_23
             foreach (Monster x in stado) x.Passport();
             Monster.SaveAllGame(Players);  // Сохранили игру
 
+            // Поработаем с классом Daemon
+            Daemon Max = new Daemon("Max", 3);
+            Console.WriteLine("************************");
+            Max.Passport();
+            Max.Think();
+            Max.Health += 200;
+            Max.Passport();
+            Console.WriteLine("************************");
+            Players.Add(Max);
+
+            // Организовать перестрелку между ботами
+            //  ПЕРЕСТРЕЛКА
+            Console.WriteLine("************************");
+            Console.WriteLine(Players.Count); // Число ботов в списке Players
+            Console.WriteLine("=========== ПЕРЕСТРЕЛКА ===========");
+            for (int i = 0; i < Players.Count; i++)
+            {
+                int first = rnd.Next(1, Players.Count);
+                int second = rnd.Next(1, Players.Count);
+                if (first == second) continue;
+                int pow = rnd.Next(1, 10);
+                Players[first].Attack(Players[second], pow);
+                Console.WriteLine("{0} атаковал {1} с силой {2}",
+                  Players[first].Name, Players[second].Name, pow);
+            }
+            Console.WriteLine("************************");
+            foreach (Monster x in Players) x.Passport();
+            Monster.SaveAllGame(Players);
+
 
             Console.ReadKey();
         }
